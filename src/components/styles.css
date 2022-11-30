@@ -12,7 +12,7 @@
     max-width: 300px;
     padding: 10px;
     border-radius: 9px;
-    padding-right: 50px;
+    padding-right: 100px;
     outline: none;
     border: 2px solid rgb(189, 189, 189);
 }
@@ -21,7 +21,7 @@
     padding: 10px 0px;
     border: 1px solid rgb(175, 175, 175);
     border-radius: 10px 10px;
-    width: 50px;
+    width: 80px;
     position: absolute;
     right: 1px;
     bottom: 1px;
@@ -42,15 +42,17 @@
     display: flex;
     background-color: rgb(223, 223, 223);
     align-items: center;
-    margin: 10px 0px;
+    margin: 10px auto;
     position: relative;
-    width: 100%;
-    /* min-width: 200px;
-    max-width: 300px; */
+    width: 60%;
     border-radius: 4px;
     transition: 0.2s;
     cursor: pointer;
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
 
 .task:hover {
     transform: scale(1.02);
@@ -60,12 +62,12 @@
     padding: 10px;
     margin: 10px 0px;
     text-align: left;
-    max-width: 65%;
+    max-width: 90%;
+    font-family: 'Hind', sans-serif;
     word-break: break-all;
 }
 
 .icons {
-    position: absolute;
     right: 10px;
     display: flex;
     gap: 10px;
@@ -103,21 +105,45 @@
     width: 28%;
     padding: 0px 20px;
     height: 100%;
-
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    min-height: 400px;
+    align-items: center;
 }
 
 .inprogress {
-    background-color: yellowgreen;
+    background-color: rgba(227, 253, 176, 0.8);
     width: 28%;
     padding: 0px 20px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    min-height: 400px;
+    align-items: center;
+
 }
+
 
 .done {
     background-color: rgb(253, 145, 145);
     padding: 0px 20px;
     width: 28%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    min-height: 400px;
+    align-items: center;
+
+}
+
+h2 {
+    font-size: 35px;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    color: rgb(53, 53, 53);
 
 }
 
@@ -125,19 +151,25 @@
 @media screen and (max-width: 800px) {
     .container {
         flex-direction: column;
+        align-items: center;
         margin-bottom: 100px;
         gap: 10px;
     }
 
     .todo {
-        width: 90%;
+        width: 80%;
+        min-height: 100px;
     }
 
     .inprogress {
-        width: 90%;
+        width: 80%;
+        min-height: 100px;
+
     }
 
     .done {
-        width: 90%;
+        width: 80%;
+        min-height: 100px;
+
     }
 }

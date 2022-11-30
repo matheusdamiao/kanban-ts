@@ -18,7 +18,7 @@ const InputField = ({ tasks, setTasks, addTask }: Props) => {
       />
       <button type="submit" className="input-btn">
         {" "}
-        add
+        add card
       </button>
     </form>
   );

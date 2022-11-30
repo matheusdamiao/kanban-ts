@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import { Tasks } from "../model";
 import { AiOutlineEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
+import {SlOptionsVertical} from 'react-icons/sl'
 import "./styles.css";
 import { Draggable } from "react-beautiful-dnd";
-
-
-
-
 
 
 type Props = {
@@ -61,7 +58,6 @@ function SingleTask({
     <Draggable draggableId={task.id.toString()} index={index}>
       {(provided) => (
         <form
-          onClick={()=>{setIsTaskClicked(!isTaskClicked)}}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
@@ -96,6 +92,9 @@ function SingleTask({
             </span>
             <span onClick={() => handleDone(task.id)}>
               <MdDone />
+            </span>
+            <span onClick={()=>{setIsTaskClicked(!isTaskClicked)}}>
+              <SlOptionsVertical />
             </span>
           </div>
         </form>

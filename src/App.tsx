@@ -71,7 +71,7 @@ const App: React.FC = () => {
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
         <h1>
-          Kanban <span id="title">Board</span>
+          Personal Kanban <span id="title">Board</span>
         </h1>
         <InputField tasks={tasks} setTasks={setTasks} addTask={addTask} />
         <Task
