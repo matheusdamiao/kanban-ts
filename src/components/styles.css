@@ -4,12 +4,15 @@
     position: relative;
     width: 100%;
     max-width: 300px;
-
+    gap: 5px;
+    justify-content: center;
+    margin-right: 20px;
 }
 
 .input-task {
-    width: 100%;
+    /* width: 100%; */
     max-width: 300px;
+    width: 100%;
     padding: 10px;
     border-radius: 9px;
     padding-right: 100px;
@@ -48,8 +51,10 @@
     border-radius: 4px;
     transition: 0.2s;
     cursor: pointer;
-    height: 150px;
+    min-height: 100px;
+    height: 100%;
     flex-direction: column;
+    padding-bottom: 20px;
     justify-content: space-around;
 }
 
@@ -92,6 +97,7 @@
     margin: 10px 0px;
 
 }
+
 
 .container {
     display: flex;
@@ -158,7 +164,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: #6867677d;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;

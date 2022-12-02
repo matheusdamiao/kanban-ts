@@ -13,8 +13,6 @@ const App: React.FC = () => {
   const [isAllowed, setIsAllowed] = useState<string>('idle');
 
 
-
-
   const addTask = (e: React.FormEvent) => {
     e.preventDefault();
     if (tasks) {
@@ -119,10 +117,12 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        <h1>
-          Personal Kanban <span id="title">Board</span>
-        </h1>
-        <InputField tasks={tasks} setTasks={setTasks} addTask={addTask} />
+        <div className='topMenu'>
+          <h1>
+            Personal Kanban <span id="title">Board</span>
+          </h1>
+          <InputField tasks={tasks} setTasks={setTasks} addTask={addTask} />
+        </div>
         <Task
           allTasks={allTasks}
           setAllTasks={setAllTasks}
