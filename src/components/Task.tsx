@@ -107,6 +107,7 @@ const Task: React.FC<Props> = ({
           </div>
         )}
       </Droppable>
+      
     </div>
   );
 };
